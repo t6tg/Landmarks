@@ -10,15 +10,20 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack(alignment: .leading) { // Vertical
-            Text("Turtal Rock")
-                .font(.title)
-            HStack { // Holizontal line
-                Text("Joshua Tree National Park").font(.subheadline)
-                Spacer() // space end of line
-                Text("California").font(.subheadline)
-            }
-        }.padding() // padding space
+        VStack {
+            MapView().frame(height: 300).edgesIgnoringSafeArea(.top)
+            CircleImage().offset(y: -130).padding(.bottom, -130)
+            VStack(alignment: .leading) { // Vertical
+                Text("Turtal Rock")
+                    .font(.title)
+                HStack { // Holizontal line
+                    Text("Joshua Tree National Park").font(.subheadline)
+                    Spacer() // space end of line
+                    Text("California").font(.subheadline)
+                }
+            }.padding()// padding space
+            Spacer()
+        }
     }
 }
 

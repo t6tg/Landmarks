@@ -10,11 +10,15 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack(alignment: .leading) {
+        VStack(alignment: .leading) { // Vertical
             Text("Turtal Rock")
                 .font(.title)
-            Text("Joshua Tree National Park").font(.subheadline)
-        }
+            HStack { // Holizontal line
+                Text("Joshua Tree National Park").font(.subheadline)
+                Spacer() // space end of line
+                Text("California").font(.subheadline)
+            }
+        }.padding() // padding space
     }
 }
 
